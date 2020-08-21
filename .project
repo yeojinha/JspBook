@@ -30,6 +30,16 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>WebContent/NewFile.jsp</name>
+			<type>1</type>
+			<location>E:/하여진/jsp/source/WebMarket_05장/WebMarket/WebContent/product.jsp</location>
+		</link>
+		<link>
+			<name>WebContent/welcom.jsp</name>
+			<type>1</type>
+			<location>E:/하여진/jsp/source/WebMarket_05장/WebMarket/WebContent/welcome.jsp</location>
+		</link>
+		<link>
 			<name>WebContent/ch03/ch_3_12/menu.jsp</name>
 			<type>1</type>
 			<location>E:/하여진/jsp/source/WebMarket_03장/WebMarket/WebContent/menu.jsp</location>

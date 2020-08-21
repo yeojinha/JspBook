@@ -13,7 +13,7 @@
 <title>상품 목록</title>
 </head>
 <body>
-	<jsp:include page="menu.jsp" />
+	<jsp:include page="menu.jsp" /><!--  -->
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3">상품 목록</h1>
@@ -25,15 +25,15 @@
 	<div class="container">
 		<div class="row" align="center">
 			<%
-				for (Product i : listOfProducts) {
-					Product pdt = i;
+				for (Product pdt : listOfProducts) {
+					
 			%>
 			<div class="col-md-4">
 				<h3><%=pdt.getPname()%></h3>
 				<p><%=pdt.getDescription()%>
 				<p><%=pdt.getUnitPrice()%>원
-				<p> <a href="./product.jsp?id=<=product.getProductId()%>"
-				class="btn btn-secondary" role="button"> 상세 정보 &raquo;</a>
+				<p> <a href="./product.jsp?id=<%=pdt.getProductId()%>"
+				class="btn btn-secondary" role="button"> 상세 정보 &raquo;></a>
 			</div>
 			<%
 				}/*
