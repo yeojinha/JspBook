@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="dto.Product"%>
-
+<%@page import="dao.ProductRepository" %>
 <jsp:useBean id="productDAO" class="dao.ProductRepository"
 	scope="session" />
 <!DOCTYPE html>
@@ -21,12 +21,14 @@
 	</div>
 	<%
 		String id = request.getParameter("id");
-		Product product = productDAO.getProductById(id);
+		ProductRepository dao=ProductRepository.getInstance();
+		Product product=dao.getProductById(id);
+		//Product product = productDAO.getProductById(id);
 	%>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-			<% if(product!=null) {%>
+			<!--  <% if(product!=null) {%>-->
 				<h3><%=product.getPname()%></h3>
 				<p><%=product.getDescription()%>
 				<p>
@@ -38,7 +40,7 @@
 			
 					<p> <a href="#" class="btn btn-info"> 상품 주문 &raquo;</a>
 					<a href="./products.jsp" class="btn btn-secondary"> 상품 목록 &raquo;</a>
-							<%}else%> <%{ out.println("null입니다"+"<br>");}%>
+							<!--  <%}else%> <%{ out.println("null입니다"+"<br>");}%>-->
 			</div>
 		</div>
 	</div>
